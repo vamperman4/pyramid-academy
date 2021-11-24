@@ -22,19 +22,21 @@ public class Main {
         String option [] = {"Exit Game","Super Dragon", "Ugly Dragon"};
 
         Scanner userInput = new Scanner(System.in);
+        try {
+            int input = userInput.nextInt();
 
-        int input = userInput.nextInt();
+            // if and output of game
+            if (input == 1) {
+                System.out.println("You've chosen the super dragon. Whoop! Whoop!"
+                        + "You get the treasure and a ride!");
+            } else if (input == 2) {
+                System.out.println("You have chosen to be the dragons dinner! YOU ARE DEAD");
 
-        // if and output of game
-        if (input == 1) {
-            System.out.println("You've chosen the super dragon. Whoop! Whoop!"
-                    +"You get the treasure and a ride!");
-        }
-        else if(input == 2) {
-            System.out.println("You have chosen to be the dragons dinner! YOU ARE DEAD" );
-        }
-        else {
-            System.out.println("Exit" );
+            } else {
+                System.out.println("Exit");
+            }
+        } catch (Exception e) {
+            exception.toString();
         }
     }
 }
